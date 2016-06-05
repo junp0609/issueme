@@ -9,148 +9,63 @@
   <link rel="stylesheet" href="/css/front/issVUpi001.css" >
   <script src="/js/jquery-2.2.4.min.js"></script>
   <script src="/vender/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-
-	
 </head>
 
-<body class="header-fixed">
-<!--=== Header ===-->
-	<jsp:include page="../include/top.jsp"></jsp:include>
-<!--=== End Header ===-->
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>-->
+      <a class="navbar-brand" href="#">Issume</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <!--  <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+ <!--   <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>-->
+    <div class="col-sm-8 text-left"> 
+     <!--loginform-->
+      <form action = "/join" method ="post" id="join">
+      	<input type="nickname" class="form-control rounded-right" placeholder="닉네임을 입력하세요" name="tomoVupi001[nickname]" id="nickname" >
+      	<input type="email" class="form-control rounded-right" placeholder="이메일 입력하세요" name="tomoVupi001[email]" id="email" >
+        <input type="password" class="form-control rounded-right" placeholder="패스워드를 입력하세요" name="tomoVupi001[password]" id="password" >
+        <button type="button" class ="btn-u btn-u-red btn-block rounded btn_ajax" action = "login" >LOGIN</button>
+      </form>
+    </div>
+  <!--  <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>-->
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 	
-	
-<!--=== Content Part ===-->
-	<div class="container-fluid">
-		<div class="row equal-height-columns">
-			<div class="col-md-6 col-sm-6 hidden-xs image-block equal-height-column"></div>
-			<div class="col-md-6 col-sm-6 form-block equal-height-column">
-			
-			
-				<a href="index.html">
-					<img src="/img/logo1-default.png" alt="">
-				</a>
-				<div id=msgArea>
-            <ul class = msgAreaUl>
-            </ul>
-        </div>
-				<h2 class="margin-bottom-30">Login To Your Account</h2>
-			 <form action = "/login" method ="post" id="login">
-					<div class="login-block">
-						<div class="input-group margin-bottom-20">
-							<span class="input-group-addon rounded-left input-border-email"><i class="icon-user color-red"></i></span>
-							<input type="email" class="form-control rounded-right input-border-email" placeholder="이메일 입력하세요" name="tomoVupi001[email]" id="email" >
-						</div>
-
-						<div class="input-group margin-bottom-20">
-							<span class="input-group-addon rounded-left input-border-password"><i class="icon-lock color-red"></i></span>
-							<input type="password" class="form-control rounded-right input-border-password" placeholder="Password를 입력하세요" name="tomoVupi001[password]" id="password" >
-						</div>
-
-						<div class="checkbox">
-							<ul class="list-inline">
-								<li>
-									<label>
-										<input type="checkbox"> ID기억하기
-									</label>
-								</li>
-
-								<li class="pull-right">
-									<a href="#">비밀번호를 잊으셨나요?</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="row margin-bottom-70">
-							<div class="col-md-12">
-							    <button type="button" class ="btn-u btn-u-red btn-block rounded btn_ajax" action = "login" >LOGIN</button>
-							</div>
-						</div>
-
-						<div class="social-login text-center">
-							<div class="or rounded-x">Or</div>
-							<ul class="list-inline margin-bottom-20">
-								<li>
-									<button class="btn rounded btn-lg btn-facebook">
-										<i class="fa fa-facebook"></i> 페이스북으로 로그인
-									</button>
-								</li>
-								<li>
-									<button class="btn rounded btn-lg btn-twitter">
-										<i class="fa fa-twitter"></i> 트위터로 로그인
-									</button>
-								</li>
-							</ul>
-							<p>아직 회원이 아니신가요? <a href="page_registration2.html">회원 가입</a></p>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div><!--/container-->
-	<!--=== End Content Part ===-->
-
-
-	<!-- Footer Section -->
-	<jsp:include page="../include/bottom.jsp"></jsp:include>
-	<!-- End Footer Section -->
-
-
-	<!-- JS Global Compulsory -->
-	<script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="/plugins/jquery/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-	<!-- JS Implementing Plugins -->
-	<script type="text/javascript" src="/plugins/back-to-top.js"></script>
-	<script type="text/javascript" src="/plugins/backstretch/jquery.backstretch.min.js"></script>
-
-	<script type="text/javascript" src="/plugins/smoothScroll.js"></script>
-	<script type="text/javascript" src="/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
-	<script type="text/javascript" src="/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="/plugins/jquery.parallax.js"></script>
-	<script type="text/javascript" src="/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	
-	
-	<!-- JS Customization -->
-	<script type="text/javascript" src="/js/custom.js"></script>
-
-	<!-- JS Page Level -->
-	<script type="text/javascript" src="/js/app.js"></script>
-	<script type="text/javascript" src="/js/forms/login.js"></script>
-	<script type="text/javascript" src="/js/forms/contact.js"></script>
-	<script type="text/javascript" src="/js/plugins/style-switcher.js"></script>
-	<script type="text/javascript" src="/js/tomo/tomoBaseScript.js"></script>
-	
-
-
-
-	
-	
-	<script>
-		jQuery(document).ready(function() {
-			App.init();
-			LoginForm.initLoginForm();
-			ContactForm.initContactForm();
-			StyleSwitcher.initStyleSwitcher();
-			
-		});
-		
-	</script>
-	<script>
-		$(".image-block").backstretch([
-			"/img/login_back1.jpg",
-			"/img/login_back1.jpg",
-			], {
-				fade: 1000,
-				duration: 7000
-			});
-	</script>
-	
-	
-<!--[if lt IE 9]>
-	<script src="assets/plugins/respond.js"></script>
-	<script src="assets/plugins/html5shiv.js"></script>
-	<script src="assets/plugins/placeholder-IE-fixes.js"></script>
-	<![endif]-->
 </body>
 </html>
